@@ -29,12 +29,14 @@ struct ConsultPage: View {
                                 .foregroundStyle(.secondary)
                         }
                 } else {
-                    Text(
-                        errorOccurred ? "An Error Has Occurred"
-                        : waitingForResponse ? "Waiting for Response"
-                        : consultOutput == "" ? "Waiting for User Input"
-                        : consultOutput
-                    )
+                    ScrollView {
+                        Text(
+                            errorOccurred ? "An Error Has Occurred"
+                            : waitingForResponse ? "Waiting for Response"
+                            : consultOutput == "" ? "Waiting for User Input"
+                            : LocalizedStringKey(consultOutput)
+                        )
+                    }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                         .background {
@@ -48,6 +50,7 @@ struct ConsultPage: View {
             VStack(alignment: .leading) {
                 Label("User", systemImage: "person.circle")
                 TextField("User Input", text: $userInput, prompt: Text("User Input"))
+                    .lineLimit(2)
                     .padding()
                     .background {
                         RoundedRectangle(cornerRadius: 10.0)
