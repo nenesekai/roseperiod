@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BBE353672D456799008B98CF /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BBE353662D456799008B98CF /* HorizonCalendar */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BBE353472D456688008B98CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE353672D456799008B98CF /* HorizonCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = roseperiod;
 			packageProductDependencies = (
+				BBE353662D456799008B98CF /* HorizonCalendar */,
 			);
 			productName = roseperiod;
 			productReference = BBE353342D456687008B98CF /* roseperiod.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = BBE3532B2D456687008B98CF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BBE353652D456799008B98CF /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BBE353352D456687008B98CF /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBE353652D456799008B98CF /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBE353662D456799008B98CF /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBE353652D456799008B98CF /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBE3532C2D456687008B98CF /* Project object */;
 }
